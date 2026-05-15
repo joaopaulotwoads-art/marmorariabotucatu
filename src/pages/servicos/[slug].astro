@@ -16,7 +16,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 const { slug } = Astro.params;
 const service = getServiceBySlug(slug as string)!;
 const otherServices = getOtherServices(slug as string);
-const whatsappLink = `https://wa.me/5514981651674?text=Olá! Gostaria de um orçamento para ${service.title}.`;
+const whatsappLink = `https://wa.me/5514981651674?text=Olá! Vim através do marmorariabotucatu.com.br e gostaria de solicitar um orçamento para ${service.title}.`;
 ---
 
 <Layout title={service.metaTitle} description={service.metaDescription}>
