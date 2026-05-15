@@ -1,0 +1,115 @@
+---
+const whatsappLink = "https://wa.me/5514981651674?text=Olá! Gostaria de solicitar um orçamento.";
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden bg-stone-950">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="/images/hero.png"
+      alt="Cozinha luxuosa com bancada de mármore em Botucatu SP"
+      class="h-full w-full object-cover opacity-50"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <!-- Multi-layer gradient for depth -->
+    <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/40"></div>
+  </div>
+
+  <!-- Decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent"></div>
+
+  <!-- Vertical gold accent line -->
+  <div class="absolute left-8 top-1/2 -translate-y-1/2 h-32 w-px bg-gradient-to-b from-transparent via-gold/40 to-transparent hidden lg:block"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8 lg:py-0">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Text content -->
+      <div class="max-w-xl">
+        <!-- Badge -->
+        <div class="mb-8 inline-flex items-center gap-2.5 rounded-full border border-gold/20 bg-gold/5 px-5 py-2 backdrop-blur-md">
+          <span class="h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-[0.2em] text-gold uppercase">Excelência em Pedras Naturais</span>
+        </div>
+
+        <!-- H1 Title -->
+        <h1 class="font-serif leading-[1.1]">
+          <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white">
+            Marmoraria em
+          </span>
+          <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mt-1">
+            Botucatu
+          </span>
+          <span class="block mt-4 text-xl sm:text-2xl lg:text-3xl font-medium text-gold/90 tracking-wide">
+            Pedras Naturais & Porcelanatos
+          </span>
+        </h1>
+
+        <!-- Divider -->
+        <div class="mt-8 flex items-center gap-4">
+          <div class="h-px w-16 bg-gold/50"></div>
+          <span class="text-xs font-medium tracking-widest uppercase text-stone-500">Alto Padrão</span>
+          <div class="h-px flex-1 bg-stone-700/50"></div>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="mt-6 text-base sm:text-lg leading-relaxed text-stone-400 max-w-md">
+          Elegância e acabamento premium em mármore, granito e porcelanato.
+          Transformamos seus ambientes com sofisticação e qualidade incomparável.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-8 py-4 text-base font-semibold text-stone-950 shadow-2xl shadow-gold/20 transition-all duration-300 hover:bg-gold-light hover:shadow-gold/40 hover:-translate-y-0.5"
+            id="hero-cta-whatsapp"
+          >
+            <svg class="h-5 w-5 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+            Solicitar Orçamento
+          </a>
+          <a
+            href="#servicos"
+            class="group inline-flex items-center justify-center gap-2 rounded-full border border-stone-600 px-8 py-4 text-base font-medium text-stone-300 transition-all duration-300 hover:bg-white/5 hover:border-gold/50 hover:text-white"
+            id="hero-cta-services"
+          >
+            Ver Nossos Serviços
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Stats floating cards (desktop only) -->
+      <div class="hidden lg:flex flex-col items-end gap-6 pr-8">
+        <!-- Stats cards -->
+        <div class="flex flex-col gap-4">
+          <div class="rounded-2xl border border-stone-700/50 bg-stone-900/60 backdrop-blur-xl px-8 py-6 text-right transition-all duration-300 hover:border-gold/30">
+            <span class="block text-4xl font-serif font-bold text-gold">15+</span>
+            <span class="block text-sm text-stone-400 mt-1">Anos de Experiência</span>
+          </div>
+          <div class="rounded-2xl border border-stone-700/50 bg-stone-900/60 backdrop-blur-xl px-8 py-6 text-right transition-all duration-300 hover:border-gold/30 ml-12">
+            <span class="block text-4xl font-serif font-bold text-gold">500+</span>
+            <span class="block text-sm text-stone-400 mt-1">Projetos Realizados</span>
+          </div>
+          <div class="rounded-2xl border border-stone-700/50 bg-stone-900/60 backdrop-blur-xl px-8 py-6 text-right transition-all duration-300 hover:border-gold/30">
+            <span class="block text-4xl font-serif font-bold text-gold">100%</span>
+            <span class="block text-sm text-stone-400 mt-1">Clientes Satisfeitos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2">
+    <span class="text-[10px] font-semibold tracking-[0.3em] uppercase text-stone-600">Scroll</span>
+    <div class="h-12 w-[1px] bg-gradient-to-b from-gold/50 to-transparent relative">
+      <div class="absolute top-0 left-0 w-full h-4 bg-gold animate-bounce"></div>
+    </div>
+  </div>
+</section>

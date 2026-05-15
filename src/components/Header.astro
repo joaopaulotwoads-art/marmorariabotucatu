@@ -1,0 +1,153 @@
+---
+const navLinks = [
+  { label: "Início", href: "/#inicio" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Sobre", href: "/sobre/" },
+  { label: "Depoimentos", href: "/#depoimentos" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contato", href: "/contato/" },
+];
+
+const whatsappLink = "https://wa.me/5514981651674?text=Olá! Gostaria de solicitar um orçamento.";
+---
+
+<header
+  id="main-header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-3 group" aria-label="Marmoraria Botucatu - Início">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/20 border border-gold/30 transition-colors group-hover:bg-gold header-logo-bg">
+        <span class="font-serif text-xl font-bold text-gold group-hover:text-stone-900 transition-colors">M</span>
+      </div>
+      <div class="hidden sm:block">
+        <span class="block text-lg font-serif font-semibold text-white leading-tight header-text">Marmoraria</span>
+        <span class="block text-xs font-sans text-stone-400 tracking-widest uppercase header-subtext">Botucatu</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Navegação principal">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="nav-link text-sm font-medium text-stone-300 hover:text-gold transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- CTA + Mobile Toggle -->
+    <div class="flex items-center gap-4">
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden sm:inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-stone-950 shadow-lg shadow-gold/20 transition-all hover:bg-gold-light hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5"
+        id="header-cta"
+      >
+        <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+        Solicitar Orçamento
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition-colors mobile-menu-btn-el"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <svg class="h-6 w-6 menu-open" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg class="h-6 w-6 menu-close hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-stone-200/50">
+    <nav class="mx-auto max-w-7xl px-4 py-4 sm:px-6" aria-label="Menu mobile">
+      <div class="flex flex-col gap-1">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="mobile-nav-link rounded-lg px-4 py-3 text-base font-medium text-stone-700 hover:bg-stone-100 hover:text-gold transition-colors"
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-base font-semibold text-white hover:bg-gold-dark transition-colors"
+        >
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+          Solicitar Orçamento
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById("main-header");
+  const mobileBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuOpen = mobileBtn?.querySelector(".menu-open");
+  const menuClose = mobileBtn?.querySelector(".menu-close");
+
+  // Scroll effect: transparent → solid
+  const logoText = header?.querySelector(".header-text") as HTMLElement;
+  const logoSubtext = header?.querySelector(".header-subtext") as HTMLElement;
+  const logoBg = header?.querySelector(".header-logo-bg") as HTMLElement;
+  const navLinks = header?.querySelectorAll(".nav-link");
+  const mobileBtnEl = header?.querySelector(".mobile-menu-btn-el") as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 80) {
+      header?.classList.add("bg-white/95", "backdrop-blur-xl", "shadow-sm");
+      if (logoText) logoText.classList.replace("text-white", "text-stone-900");
+      if (logoSubtext) logoSubtext.classList.replace("text-stone-400", "text-stone-500");
+      if (logoBg) { logoBg.classList.remove("bg-gold/20", "border-gold/30"); logoBg.classList.add("bg-stone-900", "border-stone-900"); }
+      navLinks?.forEach((link) => { link.classList.replace("text-stone-300", "text-stone-600"); });
+      if (mobileBtnEl) { mobileBtnEl.classList.replace("text-white", "text-stone-700"); mobileBtnEl.classList.replace("hover:bg-white/10", "hover:bg-stone-100"); }
+    } else {
+      header?.classList.remove("bg-white/95", "backdrop-blur-xl", "shadow-sm");
+      if (logoText) logoText.classList.replace("text-stone-900", "text-white");
+      if (logoSubtext) logoSubtext.classList.replace("text-stone-500", "text-stone-400");
+      if (logoBg) { logoBg.classList.remove("bg-stone-900", "border-stone-900"); logoBg.classList.add("bg-gold/20", "border-gold/30"); }
+      navLinks?.forEach((link) => { link.classList.replace("text-stone-600", "text-stone-300"); });
+      if (mobileBtnEl) { mobileBtnEl.classList.replace("text-stone-700", "text-white"); mobileBtnEl.classList.replace("hover:bg-stone-100", "hover:bg-white/10"); }
+    }
+  });
+
+  // Mobile menu toggle
+  mobileBtn?.addEventListener("click", () => {
+    const isOpen = mobileMenu?.classList.contains("hidden");
+    mobileMenu?.classList.toggle("hidden");
+    menuOpen?.classList.toggle("hidden");
+    menuClose?.classList.toggle("hidden");
+    mobileBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+    if (isOpen) {
+      mobileMenu?.classList.add("bg-white/95", "backdrop-blur-xl");
+    }
+  });
+
+  // Close menu on nav click
+  document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+      menuOpen?.classList.remove("hidden");
+      menuClose?.classList.add("hidden");
+      mobileBtn?.setAttribute("aria-expanded", "false");
+    });
+  });
+</script>

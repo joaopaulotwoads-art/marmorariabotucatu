@@ -1,0 +1,197 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
+import FAQ from "../components/FAQ.astro";
+
+const whatsappLink = "https://wa.me/5514981651674?text=Olá! Gostaria de solicitar um orçamento.";
+
+const contactInfo = [
+  {
+    icon: "phone",
+    title: "Telefone / WhatsApp",
+    lines: ["(14) 98165-1674"],
+    link: "tel:+5514981651674",
+    linkLabel: "Ligar agora",
+  },
+  {
+    icon: "location",
+    title: "Endereço",
+    lines: ["Av. Milton Aparecido de Oliveira", "Chácaras Reunidas Vista Alegre", "Botucatu - SP, 18606-340"],
+    link: "https://www.google.com/maps/search/?api=1&query=Av+Milton+Aparecido+de+Oliveira+Botucatu+SP",
+    linkLabel: "Ver no mapa",
+  },
+  {
+    icon: "clock",
+    title: "Horário de Funcionamento",
+    lines: ["Seg - Sex: 8h às 18h", "Sáb: 8h às 12h", "Dom: Fechado"],
+    link: null,
+    linkLabel: null,
+  },
+];
+---
+
+<Layout
+  title="Contato | Marmoraria Botucatu - Solicite Seu Orçamento"
+  description="Contato Marmoraria Botucatu. Orçamento grátis pelo WhatsApp, visite nosso showroom. Atendemos Botucatu e região."
+>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-950 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-950 to-stone-900"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+
+      <!-- Decorative pattern -->
+      <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, rgba(176, 141, 87, 0.5) 1px, transparent 0); background-size: 40px 40px;"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="mb-8 flex items-center gap-2 text-sm" aria-label="Breadcrumb">
+          <a href="/" class="text-stone-400 hover:text-gold transition-colors">Início</a>
+          <svg class="h-4 w-4 text-stone-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+          <span class="text-gold">Contato</span>
+        </nav>
+
+        <div class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-gold/20 bg-gold/5 px-5 py-2 backdrop-blur-md">
+          <span class="h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-[0.2em] text-gold uppercase">Fale Conosco</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white max-w-3xl leading-[1.1]">
+          Entre em <span class="text-gold">Contato</span>
+        </h1>
+        <p class="mt-6 text-lg text-stone-400 max-w-2xl leading-relaxed">
+          Solicite seu orçamento gratuito ou tire suas dúvidas. Estamos prontos para atender você.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Cards + Map -->
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-5 lg:gap-16">
+          <!-- Left: Contact Info + WhatsApp CTA -->
+          <div class="lg:col-span-2 space-y-6">
+            <!-- WhatsApp Main CTA -->
+            <div class="rounded-2xl bg-gradient-to-br from-[#25D366] to-[#128C7E] p-6 text-white shadow-lg">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/20">
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">WhatsApp</h3>
+                  <p class="text-white/80 text-sm">Resposta rápida</p>
+                </div>
+              </div>
+              <p class="text-sm text-white/90 mb-5">
+                A forma mais rápida de solicitar seu orçamento. Resposta em poucos minutos durante o horário comercial.
+              </p>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-[#25D366] transition-all hover:bg-white/90 hover:shadow-md"
+              >
+                Enviar Mensagem
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+              </a>
+            </div>
+
+            <!-- Contact Info Cards -->
+            {contactInfo.map((info) => (
+              <div class="rounded-2xl bg-stone-50 border border-stone-100 p-6">
+                <div class="flex items-start gap-4">
+                  <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                    {info.icon === "phone" && <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>}
+                    {info.icon === "location" && <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg>}
+                    {info.icon === "clock" && <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>}
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-stone-800">{info.title}</h3>
+                    <div class="mt-2 space-y-0.5">
+                      {info.lines.map((line) => (
+                        <p class="text-sm text-stone-500">{line}</p>
+                      ))}
+                    </div>
+                    {info.link && (
+                      <a href={info.link} target={info.icon === "location" ? "_blank" : undefined} rel={info.icon === "location" ? "noopener noreferrer" : undefined} class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-gold hover:text-gold-dark transition-colors">
+                        {info.linkLabel}
+                        <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Right: Map -->
+          <div class="lg:col-span-3">
+            <div class="rounded-2xl overflow-hidden shadow-xl border border-stone-200 h-full min-h-[400px] lg:min-h-[600px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.0!2d-48.4449!3d-22.8859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQXYuIE1pbHRvbiBBcGFyZWNpZG8gZGUgT2xpdmVpcmEgLSBDaMOhY2FyYXMgUmV1bmlkYXMgVmlzdGEgQWxlZ3JlLCBCb3R1Y2F0dSAtIFNQ!5e0!3m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style="border:0; min-height: 400px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização Marmoraria Botucatu"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-16 bg-stone-50 border-t border-stone-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <span class="text-sm font-semibold tracking-widest uppercase text-gold">Área de Atendimento</span>
+          <h2 class="mt-3 font-serif text-2xl sm:text-3xl font-bold text-stone-800">Bairros que Atendemos em Botucatu</h2>
+          <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-gold"></div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2 max-w-3xl mx-auto">
+          {["Centro", "Chácaras Reunidas Vista Alegre", "Vila dos Lavradores", "Jardim Paraíso", "Jardim Dona Nicota", "Vila Assumpção", "Jardim Iolanda", "Rubião Júnior", "Jardim Bom Pastor", "Vila São Lúcio", "Jardim Continental", "Jardim Centenário", "Vila Real", "Cohab", "Jardim Cristina", "Lavapés"].map((bairro) => (
+            <span class="inline-block rounded-full bg-white border border-stone-200 px-4 py-2 text-sm text-stone-600 shadow-sm">
+              {bairro}
+            </span>
+          ))}
+        </div>
+
+        <p class="text-center mt-8 text-sm text-stone-500">
+          Também atendemos cidades da região: <strong class="text-stone-700">Pardinho, Itatinga, São Manuel, Pratânia, Bofete e Anhembi</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ inline -->
+    <FAQ />
+
+    <!-- Final CTA -->
+    <section class="py-16 lg:py-20 bg-stone-950">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="text-sm font-semibold tracking-widest uppercase text-gold">Não perca tempo</span>
+        <h2 class="mt-4 font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          Orçamento <span class="text-gold">Gratuito</span> e Sem Compromisso
+        </h2>
+        <p class="mt-4 text-stone-400 max-w-xl mx-auto">
+          Solicite agora mesmo pelo WhatsApp e receba uma proposta personalizada para o seu projeto.
+        </p>
+        <div class="mt-8">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-3 rounded-full bg-gold px-10 py-5 text-lg font-semibold text-stone-950 shadow-2xl shadow-gold/20 transition-all hover:bg-gold-light hover:shadow-gold/40 hover:-translate-y-0.5">
+            <svg class="h-6 w-6 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+            Solicitar Orçamento Agora
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>

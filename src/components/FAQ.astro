@@ -1,0 +1,50 @@
+---
+import FAQItem from "./FAQItem.astro";
+
+const faqs = [
+  {
+    question: "Qual a diferença entre Mármore, Granito e Porcelanato?",
+    answer: "O mármore é uma rocha metamórfica de aparência elegante, ideal para ambientes internos. O granito é uma rocha ígnea mais resistente, perfeita para cozinhas e áreas externas. O porcelanato é um revestimento cerâmico que pode reproduzir a aparência de pedras naturais com alta durabilidade e menor manutenção. Nossa equipe pode ajudá-lo a escolher o melhor material para cada ambiente.",
+  },
+  {
+    question: "Vocês atendem toda a região de Botucatu?",
+    answer: "Sim! Atendemos toda a cidade de Botucatu e região, incluindo Centro, Vila dos Lavradores, Jardim Paraíso, Jardim Dona Nicota, Vila Assumpção, Jardim Iolanda, Rubião Júnior e bairros adjacentes. Também atendemos cidades próximas sob consulta.",
+  },
+  {
+    question: "A medição é realmente gratuita?",
+    answer: "Sim, a medição é totalmente gratuita para clientes em Botucatu. Nossa equipe técnica vai até o local, realiza todas as medições necessárias e apresenta um orçamento detalhado sem compromisso. Basta entrar em contato pelo WhatsApp para agendar.",
+  },
+  {
+    question: "Qual o prazo de entrega e instalação?",
+    answer: "O prazo varia conforme o material e a complexidade do projeto. Em geral, trabalhamos com prazos entre 7 a 15 dias úteis após a aprovação do orçamento. Projetos sob medida podem ter prazos diferenciados. Sempre informamos o prazo exato no momento do orçamento.",
+  },
+  {
+    question: "Vocês trabalham com projetos de arquitetos?",
+    answer: "Sim, temos uma parceria consolidada com arquitetos e designers de Botucatu e região. Trabalhamos com projetos personalizados, respeitando todas as especificações técnicas e estéticas definidas pelo profissional. Entre em contato para conhecer nossas condições especiais para profissionais.",
+  },
+  {
+    question: "Quais formas de pagamento são aceitas?",
+    answer: "Aceitamos pagamento em dinheiro, PIX, transferência bancária, e cartões de crédito (consulte condições de parcelamento). Para projetos maiores, oferecemos condições especiais de pagamento. Consulte-nos para mais detalhes.",
+  },
+];
+---
+
+<section id="faq" class="py-20 lg:py-28 bg-stone-50">
+  <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="reveal mx-auto max-w-2xl text-center mb-12">
+      <span class="text-sm font-semibold tracking-widest uppercase text-gold">Tire suas dúvidas</span>
+      <h2 class="mt-3 font-serif text-3xl font-bold text-stone-800 sm:text-4xl">
+        Perguntas Frequentes
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-gold"></div>
+    </div>
+
+    <!-- FAQ List -->
+    <div class="reveal rounded-2xl bg-white p-6 sm:p-8 shadow-sm border border-stone-100">
+      {faqs.map((faq) => (
+        <FAQItem question={faq.question} answer={faq.answer} />
+      ))}
+    </div>
+  </div>
+</section>

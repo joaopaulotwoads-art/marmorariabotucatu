@@ -1,0 +1,107 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+
+const testimonials = [
+  {
+    name: "Ana Clara Mendes",
+    text: "Ficamos impressionados com a qualidade do acabamento. A bancada da cozinha ficou perfeita e o atendimento foi excepcional do início ao fim.",
+    rating: 5,
+    location: "Centro, Botucatu",
+  },
+  {
+    name: "Roberto Ferreira",
+    text: "Profissionalismo e pontualidade. Reformamos dois banheiros e o resultado superou nossas expectativas. Recomendo para toda Botucatu!",
+    rating: 5,
+    location: "Jardim Paraíso, Botucatu",
+  },
+  {
+    name: "Juliana Oliveira",
+    text: "A equipe fez a medição gratuita e nos ajudou a escolher o melhor material para nossa escada. Trabalho impecável e preço justo.",
+    rating: 5,
+    location: "Vila dos Lavradores, Botucatu",
+  },
+  {
+    name: "Carlos Eduardo Silva",
+    text: "Já é o terceiro projeto que fazemos com eles. Qualidade consistente e atenção aos detalhes que fazem toda a diferença.",
+    rating: 5,
+    location: "Jardim Dona Nicota, Botucatu",
+  },
+  {
+    name: "Mariana Costa",
+    text: "Como arquiteta, sou exigente com acabamentos. Posso dizer que é a melhor marmoraria da região de Botucatu sem hesitar.",
+    rating: 5,
+    location: "Rubião Júnior, Botucatu",
+  },
+  {
+    name: "Fernando Almeida",
+    text: "Entrega rápida e material de primeira. A lareira ficou espetacular, transformou completamente nossa sala de estar.",
+    rating: 5,
+    location: "Vila Assumpção, Botucatu",
+  },
+];
+---
+
+<section id="depoimentos" class="py-20 lg:py-28 bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="reveal mx-auto max-w-2xl text-center mb-16">
+      <span class="text-sm font-semibold tracking-widest uppercase text-gold">Depoimentos</span>
+      <h2 class="mt-3 font-serif text-3xl font-bold text-stone-800 sm:text-4xl lg:text-5xl">
+        O Que Nossos Clientes Dizem
+      </h2>
+      <div class="mx-auto mt-4 h-1 w-12 rounded-full bg-gold"></div>
+      <p class="mt-6 text-lg leading-relaxed text-stone-500">
+        A satisfação dos nossos clientes é o nosso maior orgulho.
+        Veja o que dizem sobre nossos serviços.
+      </p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="reveal grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- First card spans 2 cols on lg -->
+      <div class="lg:col-span-2">
+        <TestimonialCard
+          name={testimonials[0].name}
+          text={testimonials[0].text}
+          rating={testimonials[0].rating}
+          location={testimonials[0].location}
+        />
+      </div>
+      <TestimonialCard
+        name={testimonials[1].name}
+        text={testimonials[1].text}
+        rating={testimonials[1].rating}
+        location={testimonials[1].location}
+      />
+      <TestimonialCard
+        name={testimonials[2].name}
+        text={testimonials[2].text}
+        rating={testimonials[2].rating}
+        location={testimonials[2].location}
+      />
+      <!-- Middle card spans 2 cols on lg -->
+      <div class="lg:col-span-2">
+        <TestimonialCard
+          name={testimonials[3].name}
+          text={testimonials[3].text}
+          rating={testimonials[3].rating}
+          location={testimonials[3].location}
+        />
+      </div>
+      <div class="lg:col-span-2">
+        <TestimonialCard
+          name={testimonials[4].name}
+          text={testimonials[4].text}
+          rating={testimonials[4].rating}
+          location={testimonials[4].location}
+        />
+      </div>
+      <TestimonialCard
+        name={testimonials[5].name}
+        text={testimonials[5].text}
+        rating={testimonials[5].rating}
+        location={testimonials[5].location}
+      />
+    </div>
+  </div>
+</section>
