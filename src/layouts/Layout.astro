@@ -18,6 +18,7 @@ const schemaOrg = {
   "description": description,
   "url": "https://marmorariabotucatu.com.br",
   "telephone": "+5514981651674",
+  "email": "contato@marmorariabotucatu.com.br",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Av. Milton Aparecido de Oliveira - Chácaras Reunidas Vista Alegre",
@@ -36,7 +37,22 @@ const schemaOrg = {
     "name": "Botucatu"
   },
   "image": "https://marmorariabotucatu.com.br/images/hero.webp",
-  "priceRange": "$$"
+  "priceRange": "$$",
+  "taxID": "40.063.508/0001-53",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ]
 };
 ---
 
