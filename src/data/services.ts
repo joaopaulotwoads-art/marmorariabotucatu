@@ -28,7 +28,7 @@ export const services: Service[] = [
       "Furação para cooktop e cuba inclusa",
     ],
     materials: ["Granito Preto São Gabriel", "Mármore Branco Carrara", "Granito Branco Dallas", "Quartzito Taj Mahal"],
-    metaTitle: "Cozinhas Planejadas em Mármore e Granito | Marmoraria Botucatu",
+    metaTitle: "Cozinhas em Mármore e Granito | Marmoraria Botucatu",
     metaDescription:
       "Bancadas de cozinha em mármore e granito em Botucatu, SP. Ilhas sob medida com acabamento premium. Orçamento!",
   },
@@ -48,7 +48,7 @@ export const services: Service[] = [
       "Acabamento polido, levigado ou acetinado",
     ],
     materials: ["Mármore Branco Piguês", "Granito Preto Absoluto", "Nanoglass", "Mármore Travertino"],
-    metaTitle: "Pias e Lavabos Sob Medida em Pedra Natural | Marmoraria Botucatu",
+    metaTitle: "Pias e Lavabos em Pedra Natural | Marmoraria Botucatu",
     metaDescription:
       "Pias e lavabos sob medida em mármore e granito em Botucatu, SP. Design exclusivo com pedras nobres. Orçamento!",
   },
@@ -128,7 +128,7 @@ export const services: Service[] = [
       "Menor necessidade de manutenção",
     ],
     materials: ["Porcelanato Calacatta", "Porcelanato Statuario", "Porcelanato Marquina", "Porcelanato Sahara Noir"],
-    metaTitle: "Porcelanato Técnico - Cortes e Bancadas | Marmoraria Botucatu",
+    metaTitle: "Porcelanato Técnico e Bancadas | Marmoraria Botucatu",
     metaDescription:
       "Porcelanato técnico em Botucatu, SP. Cortes especiais e bancadas em grandes formatos. Orçamento gratuito!",
   },
