@@ -113,6 +113,13 @@ const schemaOrg = {
         })(document);
         smartlook('init', '81f94c650c6fa21d89b22fd5b7752fbccdbddcb2', { region: 'eu' });
       </script>
+      <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DLPGHPCHGE"></script>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){ dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', 'G-DLPGHPCHGE');
+      </script>
     )}
 
     <style>
@@ -143,11 +150,10 @@ const schemaOrg = {
     <script is:inline>
       document.addEventListener('click', function (e) {
         var a = e.target.closest('a[href*="wa.me"]');
-        if (!a || !window.smartlook) return;
-        smartlook('track', 'whatsapp_click', {
-          botao: a.id || a.innerText.trim().slice(0, 40),
-          pagina: location.pathname
-        });
+        if (!a) return;
+        var dados = { botao: a.id || a.innerText.trim().slice(0, 40), pagina: location.pathname };
+        if (window.smartlook) smartlook('track', 'whatsapp_click', dados);
+        if (window.gtag) gtag('event', 'whatsapp_click', dados);
       });
     </script>
   </body>
