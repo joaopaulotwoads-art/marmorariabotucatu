@@ -1,0 +1,94 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import WhatsAppButton from "../../components/WhatsAppButton.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import FAQ from "../../components/FAQ.astro";
+import { services } from "../../data/services";
+
+const whatsappLink = "https://wa.me/5514996001662?text=Olá! Vim através do marmorariabotucatu.com.br e gostaria de solicitar um orçamento.";
+---
+
+<Layout
+  title="Nossos Serviços | Marmoraria Botucatu"
+  description="Conheça todos os serviços da Marmoraria Botucatu: cozinhas, pias e lavabos, nichos e cubas esculpidas, ilhas gourmet e churrasqueiras em mármore, granito e quartzo."
+>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-stone-950 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-950 to-stone-900"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+      <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 1px 1px, rgba(176, 141, 87, 0.5) 1px, transparent 0); background-size: 40px 40px;"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav class="mb-8 flex items-center gap-2 text-sm" aria-label="Breadcrumb">
+          <a href="/" class="text-stone-400 hover:text-gold transition-colors">Início</a>
+          <svg class="h-4 w-4 text-stone-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+          <span class="text-gold">Serviços</span>
+        </nav>
+
+        <div class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-gold/20 bg-gold/5 px-5 py-2 backdrop-blur-md">
+          <span class="h-2 w-2 rounded-full bg-gold animate-pulse"></span>
+          <span class="text-xs font-semibold tracking-[0.2em] text-gold uppercase">O que fazemos</span>
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white max-w-3xl leading-[1.1]">
+          Nossos <span class="text-gold">Serviços</span>
+        </h1>
+        <p class="mt-6 text-lg text-stone-400 max-w-2xl leading-relaxed">
+          Soluções completas em mármore, granito e quartzo, com corte e acabamento feitos na nossa oficina em Botucatu.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <ServiceCard
+              title={service.title}
+              description={service.description}
+              image={service.image}
+              alt={service.alt}
+              href={`/servicos/${service.slug}/`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <FAQ />
+
+    <!-- CTA -->
+    <section class="py-16 lg:py-20 bg-stone-950">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="text-sm font-semibold tracking-widest uppercase text-gold">Pronto para começar?</span>
+        <h2 class="mt-4 font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          Solicite Seu Orçamento <span class="text-gold">Gratuito</span>
+        </h2>
+        <p class="mt-4 text-stone-400 max-w-xl mx-auto">
+          Entre em contato pelo WhatsApp e receba um orçamento personalizado para o seu projeto.
+        </p>
+        <div class="mt-8">
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#1fb855] hover:shadow-xl hover:-translate-y-0.5"
+          >
+            <svg class="h-6 w-6 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 0 0 .917.918l4.458-1.495A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.35 0-4.531-.69-6.379-1.872l-.447-.287-2.648.888.888-2.648-.287-.447A9.724 9.724 0 0 1 2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>

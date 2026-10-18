@@ -9,6 +9,7 @@ export interface Service {
   materials: string[];
   metaTitle: string;
   metaDescription: string;
+  gallery?: string[];
 }
 
 export const services: Service[] = [
@@ -71,6 +72,7 @@ export const services: Service[] = [
     metaTitle: "Nichos e Cubas Esculpidas em Pedra | Marmoraria Botucatu",
     metaDescription:
       "Nichos e cubas esculpidas em mármore em Botucatu, SP. Peças monolíticas sem emendas. Acabamento premium!",
+    gallery: ["/images/services/nicho-banheiro.webp"],
   },
   {
     title: "Ilhas Gourmet em Pedra Natural",
@@ -91,46 +93,32 @@ export const services: Service[] = [
     metaTitle: "Ilhas Gourmet em Pedra Natural | Marmoraria Botucatu",
     metaDescription:
       "Ilhas gourmet e bancadas para churrasqueira em pedra natural em Botucatu, SP. Acabamento premium. Orçamento!",
+    gallery: ["/images/services/ilha-sao-gabriel.webp"],
   },
   {
-    title: "Escadas e Soleiras",
-    slug: "escadas-e-soleiras",
-    description: "Escadas revestidas e soleiras que trazem unidade visual ao projeto.",
+    title: "Churrasqueiras e Áreas Gourmet",
+    slug: "churrasqueiras",
+    description: "Churrasqueiras revestidas em pedra natural com moldura e acabamento sob medida.",
     longDescription:
-      "Escadas e soleiras em pedra natural conferem sofisticação e unidade visual a qualquer projeto arquitetônico. Nosso trabalho especializado garante cortes precisos, encaixes perfeitos e acabamento antiderrapante para total segurança. Oferecemos uma ampla variedade de pedras e acabamentos para que cada escada e soleira se integrem harmoniosamente ao design do seu espaço.",
-    image: "/images/services/escada.webp",
-    alt: "Escada revestida em mármore com soleira - Marmoraria Botucatu SP",
+      "Damos o acabamento final da sua área gourmet com churrasqueiras revestidas em granito e mármore. Trabalhamos com cortes precisos para molduras, bancadas de apoio e revestimentos que resistem ao calor e ao uso intenso, mantendo a beleza da pedra natural por muitos anos. Cada churrasqueira é projetada sob medida para se integrar ao espaço e ao estilo da sua área externa.",
+    image: "/images/services/churrasqueira.webp",
+    alt: "Churrasqueira revestida com moldura em granito - Marmoraria Botucatu SP",
     features: [
-      "Degraus com acabamento antiderrapante",
-      "Soleiras em diversos tipos de pedra",
-      "Peitoris e pingadeiras",
-      "Rodapés coordenados",
-      "Instalação com nivelamento perfeito",
+      "Moldura e revestimento em pedra natural",
+      "Bancadas de apoio integradas",
+      "Pedras resistentes a calor e fumaça",
+      "Acabamento sob medida para cada espaço",
+      "Integração com ilhas e balcões gourmet",
     ],
-    materials: ["Granito Preto São Gabriel", "Mármore Branco", "Granito Cinza Andorinha", "Granito Marrom Imperial"],
-    metaTitle: "Escadas e Soleiras em Pedra Natural | Marmoraria Botucatu",
+    materials: ["Granito Preto São Gabriel", "Granito Verde Ubatuba", "Granito Cinza Andorinha", "Mármore Branco"],
+    metaTitle: "Churrasqueiras em Pedra Natural | Marmoraria Botucatu",
     metaDescription:
-      "Escadas revestidas e soleiras em mármore e granito em Botucatu, SP. Acabamento antiderrapante. Orçamento!",
-  },
-  {
-    title: "Serviços em Porcelanato Técnico",
-    slug: "porcelanato-tecnico",
-    description: "Cortes especiais e bancadas em porcelanato de grandes formatos.",
-    longDescription:
-      "Especializados em trabalhar com porcelanatos de grandes formatos, oferecemos cortes técnicos de alta precisão para bancadas, revestimentos e acabamentos. O porcelanato técnico combina a beleza das pedras naturais com praticidade e custo-benefício, sendo uma excelente opção para quem busca sofisticação com menor necessidade de manutenção. Nossos equipamentos de ponta garantem cortes perfeitos mesmo nas peças de maiores dimensões.",
-    image: "/images/services/porcelanato.webp",
-    alt: "Bancada em porcelanato técnico de grande formato - Marmoraria Botucatu SP",
-    features: [
-      "Cortes em porcelanato de grande formato",
-      "Bancadas com acabamento de borda diferenciado",
-      "Revestimento de paredes e pisos",
-      "Acabamento que imita pedras naturais",
-      "Menor necessidade de manutenção",
+      "Churrasqueiras revestidas em granito e mármore em Botucatu, SP. Acabamento sob medida. Orçamento gratuito!",
+    gallery: [
+      "/images/services/churrasqueira-2.webp",
+      "/images/services/churrasqueira-3.webp",
+      "/images/services/churrasqueira-4.webp",
     ],
-    materials: ["Porcelanato Calacatta", "Porcelanato Statuario", "Porcelanato Marquina", "Porcelanato Sahara Noir"],
-    metaTitle: "Porcelanato Técnico e Bancadas | Marmoraria Botucatu",
-    metaDescription:
-      "Porcelanato técnico em Botucatu, SP. Cortes especiais e bancadas em grandes formatos. Orçamento gratuito!",
   },
 ];
 

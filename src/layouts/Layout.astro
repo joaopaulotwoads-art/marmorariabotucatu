@@ -1,4 +1,6 @@
 ---
+import { services } from "../data/services";
+
 interface Props {
   title?: string;
   description?: string;
@@ -6,7 +8,7 @@ interface Props {
 
 const {
   title = "Marmoraria em Botucatu | Pedras de Alto Padrão",
-  description = "Marmoraria em Botucatu, SP. Mármore, granito e porcelanato de alto padrão. Medição gratuita e acabamento premium. Orçamento!",
+  description = "Marmoraria em Botucatu, SP. Mármore, granito e quartzo de alto padrão. Medição gratuita e acabamento premium. Orçamento!",
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -15,6 +17,7 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Marmoraria Botucatu",
+  "alternateName": "RR Marmoraria",
   "description": description,
   "url": "https://marmorariabotucatu.com.br",
   "telephone": "+5514996001662",
@@ -29,16 +32,38 @@ const schemaOrg = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -22.8859,
-    "longitude": -48.4449
+    "latitude": -22.9108035,
+    "longitude": -48.4807331
   },
   "areaServed": {
     "@type": "City",
     "name": "Botucatu"
   },
+  "sameAs": [
+    "https://www.instagram.com/rr_marmoraria/",
+    "https://share.google/PDhHNoRmf1HODf9RS"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Raimundo",
+    "jobTitle": "Proprietário"
+  },
   "image": "https://marmorariabotucatu.com.br/images/hero.webp",
   "priceRange": "$$",
   "taxID": "40.063.508/0001-53",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços",
+    "itemListElement": services.map((service) => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "url": `https://marmorariabotucatu.com.br/servicos/${service.slug}/`
+      }
+    }))
+  },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
