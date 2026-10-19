@@ -176,7 +176,13 @@ const schemaOrg = {
       document.addEventListener('click', function (e) {
         var a = e.target.closest('a[href*="wa.me"]');
         if (!a) return;
-        var dados = { botao: a.id || a.innerText.trim().slice(0, 40), pagina: location.pathname };
+        var code = 'MB-' + Date.now().toString(36).slice(-4).toUpperCase()
+                 + Math.random().toString(36).slice(2, 4).toUpperCase();
+        var url = new URL(a.href);
+        var base = (url.searchParams.get('text') || '').replace(/\n*Código: #MB-\w+$/, '');
+        url.searchParams.set('text', base + '\n\nCódigo: #' + code);
+        a.href = url.toString();
+        var dados = { lead_code: code, botao: a.id || a.innerText.trim().slice(0, 40), pagina: location.pathname };
         if (window.smartlook) smartlook('track', 'whatsapp_click', dados);
         if (window.gtag) gtag('event', 'whatsapp_click', dados);
       });
